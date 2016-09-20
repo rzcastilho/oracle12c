@@ -1,3 +1,7 @@
+[![](https://images.microbadger.com/badges/image/rodrigozc/oracle12c.svg)](https://microbadger.com/images/rodrigozc/oracle12c "Get your own image badge on microbadger.com")
+
+[![](https://images.microbadger.com/badges/version/rodrigozc/oracle12c.svg)](https://microbadger.com/images/rodrigozc/oracle12c "Get your own version badge on microbadger.com")
+
 # Docker Oracle12c
 Oracle12c XE with SSH Server
 
