@@ -13,11 +13,10 @@ USER root
 WORKDIR /
 
 RUN usermod -a -G sudo oracle
+RUN echo 'oracle:welcome1' | chpasswd
 
 USER oracle
 WORKDIR /u01/app/oracle
-
-RUN echo 'oracle:welcome1' | chpasswd
 
 EXPOSE 22
 
