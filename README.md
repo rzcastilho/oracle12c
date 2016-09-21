@@ -2,7 +2,7 @@
 
 [![](https://images.microbadger.com/badges/version/rodrigozc/oracle12c.svg)](https://microbadger.com/images/rodrigozc/oracle12c "Get your own version badge on microbadger.com")
 
-# Docker Oracle12c
+# Oracle12c + SSH Server
 Oracle12c XE with SSH Server
 
 ---------------------------------------
@@ -14,10 +14,10 @@ Run with all ports opened:
 
     docker run -d -p 1521:1521 -p 8080:8080 -p 2222:22 rodrigozc/oracle12c
 ---------------------------------------
-Root password for ssh access:
+Oracle user password for ssh access:
 
-    oracle
+    welcome1
 ---------------------------------------
-Password for database users SYSTEM and SYS:
+Database password for SYSTEM and SYS:
 
     oracle
