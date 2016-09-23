@@ -15,9 +15,6 @@ WORKDIR /
 RUN usermod -a -G sudo oracle
 RUN echo 'oracle:welcome1' | chpasswd
 
-USER oracle
-WORKDIR /u01/app/oracle
-
 EXPOSE 22
 
 CMD ["/usr/sbin/sshd", "-D"]
