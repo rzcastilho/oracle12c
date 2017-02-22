@@ -16,7 +16,7 @@ RUN chsh -s /bin/bash oracle
 RUN usermod -a -G sudo oracle
 RUN echo 'oracle:welcome1' | chpasswd
 
-EXPOSE 22 1521 8080
+EXPOSE 22
 
 ADD entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
