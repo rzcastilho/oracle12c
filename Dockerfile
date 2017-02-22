@@ -9,6 +9,11 @@ RUN mkdir /var/run/sshd
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 
+WORKDIR /tmp
+RUN git clone https://github.com/rodrigozc/oracle12c
+RUN cp -f /tmp/oracle12c/entrypoint.sh /
+RUN rm -Rf /tmp/oracle12c
+
 USER root
 WORKDIR /
 

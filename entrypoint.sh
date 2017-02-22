@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+# Start SSH Server
+nohup /usr/sbin/sshd -D &> /nohup_ssh.out &
+echo "SSH server started. ;)"
+
 # Prevent owner issues on mounted folders
 chown -R oracle:dba /u01/app/oracle
 rm -f /u01/app/oracle/product
@@ -43,9 +47,6 @@ case "$1" in
 			su oracle -c 'echo -e "ALTER USER ANONYMOUS ACCOUNT UNLOCK;" | $ORACLE_HOME/bin/sqlplus -S / as sysdba > /dev/null'
 			echo "Database initialized. Please visit http://#containeer:8080/em http://#containeer:8080/apex for extra configuration if needed"
 		fi
-
-		/usr/sbin/sshd -D
-		echo "SSH server started. ;)"
 
 		if [ $WEB_CONSOLE == "true" ]; then
 			echo 'Starting web management console'
