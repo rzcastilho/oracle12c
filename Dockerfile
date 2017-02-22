@@ -3,7 +3,7 @@ MAINTAINER Rodrigo Zampieri Castilho <rodrigo.zampieri@gmail.com>
 
 RUN apt-get update
 RUN apt-get -y install software-properties-common
-RUN apt-get -y install build-essential openssh-server sudo man vim whois zip
+RUN apt-get -y install build-essential openssh-server sudo man vim whois zip git
 
 RUN mkdir /var/run/sshd
 ENV NOTVISIBLE "in users profile"
