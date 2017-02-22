@@ -23,6 +23,5 @@ RUN echo 'oracle:welcome1' | chpasswd
 
 EXPOSE 22
 
-ADD entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
 CMD [""]
