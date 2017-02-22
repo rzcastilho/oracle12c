@@ -12,9 +12,12 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 USER root
 WORKDIR /
 
+RUN chsh -s /bin/bash oracle
 RUN usermod -a -G sudo oracle
 RUN echo 'oracle:welcome1' | chpasswd
 
-EXPOSE 22
+EXPOSE 22 1521 8080
 
-CMD ["/usr/sbin/sshd", "-D"]
+ADD entrypoint.sh /
+ENTRYPOINT ["/entrypoint.sh"]
+CMD [""]
